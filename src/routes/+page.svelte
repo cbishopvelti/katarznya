@@ -71,7 +71,7 @@
     padding: 4px;
   }
   div.forCarerUse > div {
-    height: 30px;
+    min-height: 30px;
   }
 
   table.timesDates {
@@ -169,11 +169,11 @@
         <input id="officeInformedNo" type="radio" name="officeInformed" value="no" />
         <label for="officeInformedNo">No</label>
       </div>
-      <div>
-        <label for="from">Form covers period from </label>
-        <input id="from" type="text">
+      <div style="display: flex; align-items: center;">
+        <label for="from" style="flex: 0 0 auto;">Form covers period from </label>
+        <input style="flex: 1 1 25%; width: 20px;" id="from" type="text">
         <label for="to">to</label>
-        <input id="to" type="text">
+        <input style="flex: 1 1 25%; width: 20px;" id="to" type="text">
 
       </div>
       <span><i>Name and signature of transcriber if medicine details completed by care provider</i></span>

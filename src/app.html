@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+		<style type="text/css">
+			* {
+            box-sizing: border-box;
+        }
+ 
+        
+				@page narrow {
+            size: A4 portrait;
+						/* size: 297mm 210mm portrait; */
+            margin: 0;
+        }
+				@page wide {
+            /* size: A4 landscape; */
+						size: 210mm 297mm landscape;
+            margin: 0;
+        }
+
+				html,
+        body {
+            margin: 0;
+            padding: 0;
+						font-family: arial;
+        }
+
+				div.landscape {
+					page: wide;
+          width: 297mm;
+					height: 210mm;
+					/* width: 100vw;
+					height: 100vw;  */
+					padding: 6px;
+					page-break-after: always;
+					border: 3px dashed pink;
+				}
+				div.portrate {
+					page: narrow;
+					width: 210mm;
+					height: 297mm;
+					padding: 6px;
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+				}
+
+				ol {
+					padding: auto;
+				}
+		</style>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		%sveltekit.body%
+	</body>
+</html>
